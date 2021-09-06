@@ -8,8 +8,8 @@ class RegistrationPage extends Component{
         return (
             <div className="auth mx-auto">
                 <form className="">
-                <div className="form-group">
-                        <h3 className="text-center">User Registration</h3>
+                    <div className="form-group">
+                        <h3 className="text-center pb-3">User Registration</h3>
                     </div>
                     <div className="form-group">
                         <label>First Name</label>
