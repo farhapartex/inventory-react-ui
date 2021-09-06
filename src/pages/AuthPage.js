@@ -4,6 +4,7 @@ import "../style/auth.css";
 import LoginForm from "../components/auth/LoginForm";
 import RegistrationForm from "../components/auth/RegistrationForm";
 import PasswordResetVerifyForm from "../components/auth/PasswordResetVerifyForm";
+import PasswordResetForm from "../components/auth/PasswordResetForm";
 
 
 class AuthPage extends Component{
@@ -21,6 +22,9 @@ class AuthPage extends Component{
         }
         else if(this.props.location.pathname == "/password-reset-account-verify"){
             return <PasswordResetVerifyForm></PasswordResetVerifyForm>
+        }
+        else if(this.props.location.pathname == "/password-reset"){
+            return <PasswordResetForm></PasswordResetForm>
         }
         
     }

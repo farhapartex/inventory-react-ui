@@ -15,6 +15,7 @@ function App() {
           <Route exact path="/login" component={AuthPage}></Route>
           <Route exact path="/registration" component={AuthPage}></Route>
           <Route exact path="/password-reset-account-verify" component={AuthPage}></Route>
+          <Route exact path="/password-reset" component={AuthPage}></Route>
           <Route exact path="" component={NotFoundPage} />
         </Switch>
       </Router>
