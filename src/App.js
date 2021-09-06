@@ -5,6 +5,7 @@ import BasicPage from "./pages/BasicPage";
 import NotFoundPage from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import AuthPage from "./pages/AuthPage";
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={BasicPage}></Route>
-          <Route exact path="/login" component={LoginPage}></Route>
-          <Route exact path="/registration" component={RegistrationPage}></Route>
+          <Route exact path="/login" component={AuthPage}></Route>
+          <Route exact path="/registration" component={AuthPage}></Route>
           <Route exact path="" component={NotFoundPage} />
         </Switch>
       </Router>

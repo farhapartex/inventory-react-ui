@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
-import "../style/auth.css";
 
 
-class LoginPage extends Component{
+class LoginForm extends Component{
+
     render(){
         return (
             <div className="auth mx-auto">
@@ -34,4 +34,4 @@ class LoginPage extends Component{
     }
 }
 
-export default LoginPage;
+export default LoginForm;
