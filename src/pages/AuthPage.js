@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../style/auth.css";
 import LoginForm from "../components/auth/LoginForm";
 import RegistrationForm from "../components/auth/RegistrationForm";
+import PasswordResetVerifyForm from "../components/auth/PasswordResetVerifyForm";
 
 
 class AuthPage extends Component{
@@ -17,6 +18,9 @@ class AuthPage extends Component{
         }
         else if(this.props.location.pathname == "/registration"){
             return <RegistrationForm></RegistrationForm>
+        }
+        else if(this.props.location.pathname == "/password-reset-account-verify"){
+            return <PasswordResetVerifyForm></PasswordResetVerifyForm>
         }
         
     }
