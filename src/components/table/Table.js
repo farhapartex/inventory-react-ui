@@ -17,10 +17,10 @@ class Table extends Component{
                 <tbody>
                     {
                         this.props.tableData.map((data, index) => {
-                            return <tr data-index={index}>
+                            return <tr key={index}>
                                 {
                                     Object.keys(data).map((key, index) => {
-                                        return <TdTag value={data[key]}></TdTag>
+                                        return <TdTag key={index} value={data[key]}></TdTag>
                                     })
                                 }
                             </tr>

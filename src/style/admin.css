@@ -5,3 +5,7 @@
 .admin-content{
     width: 90%;
 }
+
+.float-right {
+    float: right!important;
+}
