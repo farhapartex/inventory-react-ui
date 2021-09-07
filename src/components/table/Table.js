@@ -15,11 +15,17 @@ class Table extends Component{
             <table className={this.props.className}>
                 <TableHead columnList={this.props.columnList}></TableHead>
                 <tbody>
-                    <tr>
-                        <TdTag value="1"></TdTag>
-                        <TdTag value="System admin"></TdTag>
-                        <TdTag value="10"></TdTag>
-                    </tr>
+                    {
+                        this.props.tableData.map((data, index) => {
+                            return <tr data-index={index}>
+                                {
+                                    Object.keys(data).map((key, index) => {
+                                        return <TdTag value={data[key]}></TdTag>
+                                    })
+                                }
+                            </tr>
+                        })
+                    }
                 </tbody>
             </table>
         ) 

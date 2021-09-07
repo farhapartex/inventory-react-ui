@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/password-reset-account-verify" component={AuthPage}></Route>
           <Route exact path="/password-reset" component={AuthPage}></Route>
           {/* Admin Routers */}
-          <Route exact path="/admin/settings" component={AdminSettingsPage}></Route>
+          <Route exact path="/admin/settings/role-list" component={AdminSettingsPage}></Route>
           <Route exact path="" component={NotFoundPage} />
         </Switch>
       </Router>

@@ -22,7 +22,7 @@ class HeaderNavBar extends Component{
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto">
                             <NavLiTag link="/" className="nav-link" itemValue="Home"></NavLiTag>
-                            <NavLiTag link="/admin/settings" className="nav-link" itemValue="Settings"></NavLiTag>
+                            <NavLiTag link="/admin/settings/role-list" className="nav-link" itemValue="Settings"></NavLiTag>
                             <NavLiTag link="/" className="nav-link" itemValue="Md Nazmul Hasan (Admin)"></NavLiTag>
                             <NavLiTag link="/login" className="nav-link" itemValue="Logout"></NavLiTag>
                         </ul>
