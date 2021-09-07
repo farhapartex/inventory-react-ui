@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFound";
 import AuthPage from "./pages/AuthPage";
+import AdminSettingsPage from "./pages/admin/SettingsPage";
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
           <Route exact path="/registration" component={AuthPage}></Route>
           <Route exact path="/password-reset-account-verify" component={AuthPage}></Route>
           <Route exact path="/password-reset" component={AuthPage}></Route>
+          {/* Admin Routers */}
+          <Route exact path="/admin/settings" component={AdminSettingsPage}></Route>
           <Route exact path="" component={NotFoundPage} />
         </Switch>
       </Router>

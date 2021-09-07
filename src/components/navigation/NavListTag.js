@@ -10,7 +10,7 @@ class NavLiTag extends Component{
     render(){
         return (
             <li className="nav-item active">
-                <Link className="nav-link" to={this.props.link}>{this.props.itemValue}</Link>
+                <Link className={this.props.className} to={this.props.link}>{this.props.itemValue}</Link>
             </li>
         )
         
