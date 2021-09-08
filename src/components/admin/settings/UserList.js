@@ -21,7 +21,7 @@ class UserList extends Component{
         return (
             <div className="admin-content mx-auto">
                 <div className="w-100 mb-5">
-                    <AnchorTag link="/admin/settings/role-create" className="btn btn-warning float-right" itemValue="Create User"></AnchorTag>
+                    <AnchorTag link="/admin/settings/user-create" className="btn btn-warning float-right" itemValue="Create User"></AnchorTag>
                     <h4>System User</h4>
                 </div>
                 <Table className="table table-striped" columnList={this.columnList} tableData={this.tableData}></Table>
