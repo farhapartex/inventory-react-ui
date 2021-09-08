@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "rea
 import "../../../style/admin.css";
 import HeaderNavBar from "../../../components/navigation/HeaderNavbar";
 import AnchorTag from "../../../components/Anchortag";
-import RoleList from "./RoleList";
-import RoleForm from "./RoleForm";
+import RoleList from "../../../components/admin/settings/RoleList";
+import RoleForm from "../../../components/admin/settings/RoleForm";
 
 
 class AdminSettingsPage extends Component{
