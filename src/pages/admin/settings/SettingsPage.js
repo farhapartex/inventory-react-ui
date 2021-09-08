@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "rea
 import "../../../style/admin.css";
 import HeaderNavBar from "../../../components/navigation/HeaderNavbar";
 import AnchorTag from "../../../components/Anchortag";
-import Table from "../../../components/table/Table";
 import RoleList from "./RoleList";
+import RoleForm from "./RoleForm";
 
 
 class AdminSettingsPage extends Component{
@@ -35,6 +35,7 @@ class AdminSettingsPage extends Component{
                                 <div className="col-9">
                                     <Switch>
                                         <Route exact path={`${this.props.match.path}/role-list`} component={RoleList}/>
+                                        <Route exact path={`${this.props.match.path}/role-create`} component={RoleForm}/>
                                     </Switch>
                                     
                                 </div>
