@@ -5,6 +5,7 @@ import HeaderNavBar from "../../../components/navigation/HeaderNavbar";
 import AnchorTag from "../../../components/Anchortag";
 import RoleList from "../../../components/admin/settings/RoleList";
 import RoleForm from "../../../components/admin/settings/RoleForm";
+import UserList from "../../../components/admin/settings/UserList";
 
 
 class AdminSettingsPage extends Component{
@@ -27,8 +28,8 @@ class AdminSettingsPage extends Component{
                             <div className="row">
                                 <div className="col-3">
                                     <div className="list-group">
-                                        <AnchorTag link="/admin/settings/role-list" liClassName="" className="list-group-item list-group-item-action" itemValue="Role"></AnchorTag>
-                                        <AnchorTag link="/" className="list-group-item list-group-item-action" itemValue="System User"></AnchorTag>
+                                        <AnchorTag link={`${this.props.match.path}/role-list`} liClassName="" className="list-group-item list-group-item-action" itemValue="Role"></AnchorTag>
+                                        <AnchorTag link={`${this.props.match.path}/user-list`} className="list-group-item list-group-item-action" itemValue="System User"></AnchorTag>
                                         <AnchorTag link="/" className="list-group-item list-group-item-action" itemValue="Role"></AnchorTag>
                                     </div>
                                 </div>
@@ -36,6 +37,7 @@ class AdminSettingsPage extends Component{
                                     <Switch>
                                         <Route exact path={`${this.props.match.path}/role-list`} component={RoleList}/>
                                         <Route exact path={`${this.props.match.path}/role-create`} component={RoleForm}/>
+                                        <Route exact path={`${this.props.match.path}/user-list`} component={UserList}/>
                                     </Switch>
                                     
                                 </div>
