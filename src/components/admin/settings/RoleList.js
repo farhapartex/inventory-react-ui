@@ -8,11 +8,11 @@ import Table from "../../../components/table/Table";
 class RoleList extends Component{
     constructor(props){
         super(props);
-        this.columnList = ["ID", "Name", "Assign User", "Status", "Action"];
+        this.columnList = ["ID", "Name", "Permissions", "Assign User", "Status", "Action"];
         this.tableData = [
-            {"id": 1, "role": "Super Admin", "users": 10, "status": "Active"},
-            {"id": 2, "role": "Moderator", "users": 60, "status": "Active"},
-            {"id": 3, "role": "Editor", "users": 6, "status": "Active"}
+            {"id": 1, "role": "Super Admin", "permissions": 105, "users": 10, "status": "Active"},
+            {"id": 2, "role": "Moderator", "permissions": 25, "users": 60, "status": "Active"},
+            {"id": 3, "role": "Editor", "permissions": 15, "users": 6, "status": "Active"}
         ]
     }
 
