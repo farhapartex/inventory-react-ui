@@ -5,6 +5,8 @@ import HeaderNavBar from "../../../components/navigation/HeaderNavbar";
 import AnchorTag from "../../../components/Anchortag";
 import ShopList from "../../../components/admin/shop/ShopList";
 import ShopForm from "../../../components/admin/shop/ShopForm";
+import ShopView from "../../../components/admin/shop/ShopView";
+
 
 class AdminShopPage extends Component{
     constructor(props){
@@ -19,6 +21,7 @@ class AdminShopPage extends Component{
             <Switch>
                 <Route exact path={`${this.props.match.path}/shop-list`} component={ShopList}/>
                 <Route exact path={`${this.props.match.path}/shop-create`} component={ShopForm}/>
+                <Route exact path={`${this.props.match.path}/view/:shopdId`} component={ShopView}/>
             </Switch>
             
         </div>

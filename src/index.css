@@ -19,3 +19,9 @@ code {
 .ml-5{
   margin-left: 3 rem !important;
 }
+
+input[readonly]{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
