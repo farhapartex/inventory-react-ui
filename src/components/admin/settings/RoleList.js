@@ -8,7 +8,7 @@ import Table from "../../../components/table/Table";
 class RoleList extends Component{
     constructor(props){
         super(props);
-        this.columnList = ["ID", "Name", "Assign User", "Status"];
+        this.columnList = ["ID", "Name", "Assign User", "Status", "Action"];
         this.tableData = [
             {"id": 1, "role": "Super Admin", "users": 10, "status": "Active"},
             {"id": 2, "role": "Moderator", "users": 60, "status": "Active"},
@@ -24,7 +24,7 @@ class RoleList extends Component{
                     <AnchorTag link="/admin/settings/role-create" className="btn btn-warning float-right" itemValue="Create Role"></AnchorTag>
                     <h4>Role Management</h4>
                 </div>
-                <Table className="table table-striped" columnList={this.columnList} tableData={this.tableData}></Table>
+                <Table className="table table-striped" columnList={this.columnList} tableData={this.tableData} actionLinkPrefix="role/"></Table>
             </div>
         ) 
     }

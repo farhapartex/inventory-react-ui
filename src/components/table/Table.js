@@ -17,13 +17,16 @@ class Table extends Component{
                 <tbody>
                     {
                         this.props.tableData.map((data, index) => {
-                            return <tr key={index}>
+                            return (
+                            <tr key={index}>
                                 {
                                     Object.keys(data).map((key, index) => {
-                                        return <TdTag key={index} value={data[key]}></TdTag>
+                                        return <TdTag key={index} value={data[key]} isLinked="false"></TdTag>
                                     })
                                 }
+                                <TdTag value={data["id"]} isLinked="true" linkPrefix={this.props.actionLinkPrefix}></TdTag>
                             </tr>
+                            )
                         })
                     }
                 </tbody>
