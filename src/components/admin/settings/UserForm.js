@@ -42,14 +42,19 @@ class UserForm extends Component{
                                 <div className="col-6">
                                     <div className="form-group">
                                         <label className="mb-2">Role</label>
-                                        <input type="text" className="form-control"/>
+                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <option selected>Choose...</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div className="col-12 mt-3">
                                     <div className="form-group">
                                         <AnchorTag className="btn btn-warning" itemValue="Back" link="/admin/settings/user-list"/>
-                                        <input type="submit" className="btn btn-success ml-5" value="Submit" style={{marginLeft: 15 + 'px'}}/>
+                                        <input type="submit" className="btn btn-success ml-3" value="Submit"/>
                                     </div>
                                 </div>
                             </div>
