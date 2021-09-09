@@ -25,7 +25,7 @@ class RoleForm extends Component{
                         </div>
                         <div className="form-group">
                             <AnchorTag className="btn btn-warning" itemValue="Back" link="/admin/settings/role-list"/>
-                            <input type="submit" className="btn btn-success ml-5" value="Submit" style={{marginLeft: 15 + 'px'}}/>
+                            <input type="submit" className="btn btn-success ml-3" value="Submit"/>
                         </div>
                     </form>
                 </div>

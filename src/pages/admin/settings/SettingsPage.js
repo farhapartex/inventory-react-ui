@@ -7,6 +7,7 @@ import RoleList from "../../../components/admin/settings/RoleList";
 import RoleForm from "../../../components/admin/settings/RoleForm";
 import UserList from "../../../components/admin/settings/UserList";
 import UserForm from "../../../components/admin/settings/UserForm";
+import PasswordResetForm from "../../../components/admin/settings/PasswordResetForm";
 
 
 class AdminSettingsPage extends Component{
@@ -31,7 +32,7 @@ class AdminSettingsPage extends Component{
                                     <div className="list-group">
                                         <AnchorTag link={`${this.props.match.path}/role-list`} liClassName="" className="list-group-item list-group-item-action" itemValue="Role"></AnchorTag>
                                         <AnchorTag link={`${this.props.match.path}/user-list`} className="list-group-item list-group-item-action" itemValue="System User"></AnchorTag>
-                                        <AnchorTag link="/" className="list-group-item list-group-item-action" itemValue="Password Change"></AnchorTag>
+                                        <AnchorTag link={`${this.props.match.path}/password-reset`} className="list-group-item list-group-item-action" itemValue="Password Reset"></AnchorTag>
                                     </div>
                                 </div>
                                 <div className="col-9">
@@ -40,6 +41,7 @@ class AdminSettingsPage extends Component{
                                         <Route exact path={`${this.props.match.path}/role-create`} component={RoleForm}/>
                                         <Route exact path={`${this.props.match.path}/user-list`} component={UserList}/>
                                         <Route exact path={`${this.props.match.path}/user-create`} component={UserForm}/>
+                                        <Route exact path={`${this.props.match.path}/password-reset`} component={PasswordResetForm}/>
                                     </Switch>
                                     
                                 </div>
