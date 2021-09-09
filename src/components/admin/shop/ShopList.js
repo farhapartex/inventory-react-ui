@@ -20,7 +20,7 @@ class ShopList extends Component{
         return (
             <div className="admin-content mx-auto">
                 <div className="w-100 mb-5">
-                    <AnchorTag link="/admin/settings/user-create" className="btn btn-warning float-right" itemValue="Create User"></AnchorTag>
+                    <AnchorTag link="/admin/shop/shop-create" className="btn btn-warning float-right" itemValue="Create Shop"></AnchorTag>
                     <h4>Shop List</h4>
                 </div>
                 <Table className="table table-striped" columnList={this.columnList} tableData={this.tableData}></Table>
