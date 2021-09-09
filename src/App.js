@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFound";
 import AuthPage from "./pages/AuthPage";
 import RootPage from "./pages/admin/RootPage";
+import CustomerRootPage from "./pages/customer/RootPage";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage}></Route>
+          <Route exact path="/" component={CustomerRootPage}></Route>
           <Route exact path="/login" component={AuthPage}></Route>
           <Route exact path="/registration" component={AuthPage}></Route>
           <Route exact path="/password-reset-account-verify" component={AuthPage}></Route>

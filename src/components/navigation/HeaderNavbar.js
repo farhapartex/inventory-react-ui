@@ -6,7 +6,7 @@ import NavLiTag from "../navigation/NavListTag";
 class HeaderNavBar extends Component{
     constructor(props){
         super(props);
-        this.userRole = "admin";
+        this.userRole = "admin2";
     }
 
 
@@ -39,10 +39,7 @@ class HeaderNavBar extends Component{
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mx-auto">
-                        <NavLiTag link="/" className="nav-link" itemValue="Home"></NavLiTag>
-                        <NavLiTag link="/" className="nav-link" itemValue="Product"></NavLiTag>
-                        <NavLiTag link="/" className="nav-link" itemValue="Settings"></NavLiTag>
+                    <ul className="navbar-nav ml-auto">
                         <NavLiTag link="/" className="nav-link" itemValue="Md Nazmul Hasan (Owner)"></NavLiTag>
                         <NavLiTag link="/login" className="nav-link" itemValue="Logout"></NavLiTag>
                     </ul>
