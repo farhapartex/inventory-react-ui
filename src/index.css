@@ -25,3 +25,12 @@ input[readonly]{
   border: 0;
   font-size: 1em;
 }
+
+.side-navigation a{
+  font-size: 14px;
+  color: #212529;
+}
+
+.side-navigation a:hover{
+  background: #e6e6e6;
+}
