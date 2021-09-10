@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={CustomerRootPage}></Route>
+          <Route  path="/app" component={CustomerRootPage}></Route>
           <Route exact path="/login" component={AuthPage}></Route>
           <Route exact path="/registration" component={AuthPage}></Route>
           <Route exact path="/password-reset-account-verify" component={AuthPage}></Route>
