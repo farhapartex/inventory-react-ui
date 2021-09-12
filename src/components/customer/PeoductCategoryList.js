@@ -9,7 +9,9 @@ class ProductCategoryList extends Component{
         this.columnList = ["ID", "Name", "Total Product", "Action"];
         this.tableData = [
             {"id": 1, "name": "Electronic Accessories", "total_products": "12"},
-            {"id": 2, "name": "Clothing", "total_products": "30"}
+            {"id": 2, "name": "Clothing", "total_products": "30"},
+            {"id": 3, "name": "Health & Beauty", "total_products": "30"},
+            {"id": 4, "name": "Home & Lifestyle", "total_products": "30"}
         ]
     }
 

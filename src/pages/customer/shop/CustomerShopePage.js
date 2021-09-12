@@ -4,7 +4,8 @@ import ShopView from "../../../components/customer/ShopView";
 import ShopEdit from "../../../components/customer/ShopEdit";
 import ProductCategoryList from "../../../components/customer/PeoductCategoryList";
 import ProductCategoryForm from "../../../components/customer/ProductCategoryForm";
-import ProductCategoryView from "../../../components/customer/ProductCategoryView"
+import ProductCategoryView from "../../../components/customer/ProductCategoryView";
+import ProductList from "../../../components/customer/ProductList";
 
 
 class CustomerShopPage extends Component{
@@ -23,6 +24,7 @@ class CustomerShopPage extends Component{
                 <Route exact path={`${this.props.match.path}/product-category/list`} component={ProductCategoryList}/>
                 <Route exact path={`${this.props.match.path}/product-category/create`} component={ProductCategoryForm}/>
                 <Route exact path={`${this.props.match.path}/product-category/view/:categoryId`} component={ProductCategoryView}/>
+                <Route exact path={`${this.props.match.path}/product/list`} component={ProductList}/>
             </Switch>
             
         </div>
