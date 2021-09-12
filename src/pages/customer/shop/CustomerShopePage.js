@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "rea
 import ShopView from "../../../components/customer/ShopView";
 import ShopEdit from "../../../components/customer/ShopEdit";
 import ProductCategoryList from "../../../components/customer/PeoductCategoryList";
+import ProductCategoryForm from "../../../components/customer/ProductCategoryForm";
 
 
 class CustomerShopPage extends Component{
@@ -19,6 +20,7 @@ class CustomerShopPage extends Component{
                 <Route exact path={`${this.props.match.path}/view`} component={ShopView}/>
                 <Route exact path={`${this.props.match.path}/edit`} component={ShopEdit}/>
                 <Route exact path={`${this.props.match.path}/product-category/list`} component={ProductCategoryList}/>
+                <Route exact path={`${this.props.match.path}/product-category/create`} component={ProductCategoryForm}/>
             </Switch>
             
         </div>
