@@ -8,12 +8,12 @@ import ProductCategoryView from "../../../components/customer/ProductCategoryVie
 import ProductList from "../../../components/customer/ProductList";
 import ProductForm from "../../../components/customer/ProductForm";
 import ProductView from "../../../components/customer/ProductView";
+import EmployeeList from "../../../components/customer/EmployeeList";
 
 
 class CustomerShopPage extends Component{
     constructor(props){
         super(props);
-        console.log(this.props);
     }
 
 
@@ -29,6 +29,7 @@ class CustomerShopPage extends Component{
                 <Route exact path={`${this.props.match.path}/product/list`} component={ProductList}/>
                 <Route exact path={`${this.props.match.path}/product/create`} component={ProductForm}/>
                 <Route exact path={`${this.props.match.path}/product/view/:productId`} component={ProductView}/>
+                <Route exact path={`${this.props.match.path}/employee/list`} component={EmployeeList}/>
             </Switch>
             
         </div>
