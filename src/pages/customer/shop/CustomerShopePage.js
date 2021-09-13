@@ -6,6 +6,7 @@ import ProductCategoryList from "../../../components/customer/PeoductCategoryLis
 import ProductCategoryForm from "../../../components/customer/ProductCategoryForm";
 import ProductCategoryView from "../../../components/customer/ProductCategoryView";
 import ProductList from "../../../components/customer/ProductList";
+import ProductForm from "../../../components/customer/ProductForm";
 
 
 class CustomerShopPage extends Component{
@@ -25,6 +26,7 @@ class CustomerShopPage extends Component{
                 <Route exact path={`${this.props.match.path}/product-category/create`} component={ProductCategoryForm}/>
                 <Route exact path={`${this.props.match.path}/product-category/view/:categoryId`} component={ProductCategoryView}/>
                 <Route exact path={`${this.props.match.path}/product/list`} component={ProductList}/>
+                <Route exact path={`${this.props.match.path}/product/create`} component={ProductForm}/>
             </Switch>
             
         </div>
