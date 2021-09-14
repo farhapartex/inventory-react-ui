@@ -12,7 +12,7 @@ class InputFormGroup extends Component{
         return (
             <div className="form-group">
                 <label className={this.props.labelClassName}>{this.props.label}</label>
-                <InputText className={this.props.className}/>
+                <InputText className={this.props.inputClassName}/>
             </div>
         )
     }

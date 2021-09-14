@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import AnchorTag from "../../components/Anchortag";
+import InputFormGroup from "../input/InputFormGroup";
 
 
 class EmployeeForm extends Component{
@@ -21,22 +22,13 @@ class EmployeeForm extends Component{
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">First Name</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="First Name"/>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Last Name</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Last Name"/>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Email</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Email"/>
                                 </div>
                                 <div className="col-6">
                                     <div className="form-group">
