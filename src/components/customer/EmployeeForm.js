@@ -2,11 +2,22 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import AnchorTag from "../../components/Anchortag";
 import InputFormGroup from "../input/InputFormGroup";
+import SelectFormGroup from "../input/SelectFormGroup";
 
 
 class EmployeeForm extends Component{
     constructor(props){
         super(props);
+        this.role = [
+            {
+                "id": 1,
+                "name": "Sales"
+            },
+            {
+                "id": 2,
+                "name": "Editor"
+            }
+        ]
     }
 
 
@@ -31,15 +42,7 @@ class EmployeeForm extends Component{
                                     <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Email"/>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Role</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                            <option selected>Choose...</option>
-                                            <option value="1">Electronic Accessories</option>
-                                            <option value="2">Health & Beauty</option>
-                                            <option value="3">Home & Lifestyle</option>
-                                        </select>
-                                    </div>
+                                    <SelectFormGroup labelClassName="mb-2" label="Role" selectClassName="custom-select my-1 mr-sm-2" selectData={this.role}/>
                                 </div>
                                 
 
