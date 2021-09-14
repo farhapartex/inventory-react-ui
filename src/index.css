@@ -34,3 +34,9 @@ input[readonly]{
 .side-navigation a:hover{
   background: #e6e6e6;
 }
+
+.horizontal-line{
+  background: #d9d9d9;
+  padding-top: 1.5px;
+  padding-bottom: 1px;
+}
