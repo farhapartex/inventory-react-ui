@@ -18,4 +18,8 @@ class InputFormGroup extends Component{
     }
 }
 
+InputFormGroup.defaultProps = {
+    inputClassName: "form-control"
+}
+
 export default InputFormGroup;

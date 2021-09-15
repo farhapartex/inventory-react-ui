@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import AnchorTag from "../../components/Anchortag";
+import InputFormGroup from "../input/InputFormGroup";
+import TextAreaFormGroup from "../input/TextAreaFormGroup";
 
 
 class ProductForm extends Component{
@@ -21,16 +23,10 @@ class ProductForm extends Component{
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-12">
-                                    <div className="form-group">
-                                        <label className="mb-2">Name</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Name"/>
                                 </div>
                                 <div className="col-12">
-                                    <div className="form-group">
-                                        <label className="mb-2">Description</label>
-                                        <textarea className="form-control"></textarea>
-                                    </div>
+                                    <TextAreaFormGroup label="Description"/>
                                 </div>
                                 <div className="col-6">
                                     <div className="form-group">
@@ -45,6 +41,7 @@ class ProductForm extends Component{
                                 </div>
                                 
                                 <div className="col-6">
+                                    <InputFormGroup labelClassName="mb-2" label="Product Price"/>
                                     <div className="form-group">
                                         <label className="mb-2">Product Price</label>
                                         <input type="text" className="form-control"/>
