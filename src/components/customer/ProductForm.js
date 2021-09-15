@@ -3,11 +3,26 @@ import { Link } from "react-router-dom";
 import AnchorTag from "../../components/Anchortag";
 import InputFormGroup from "../input/InputFormGroup";
 import TextAreaFormGroup from "../input/TextAreaFormGroup";
+import SelectFormGroup from "../input/SelectFormGroup";
 
 
 class ProductForm extends Component{
     constructor(props){
         super(props);
+        this.productCategory = [
+            {
+                "id": 1,
+                "name": "Computer Accessories"
+            },
+            {
+                "id": 2,
+                "name": "Kitchen & Dining"
+            },
+            {
+                "id": 2,
+                "name": "Watch & Sunglasses"
+            }
+        ]
     }
 
 
@@ -29,35 +44,17 @@ class ProductForm extends Component{
                                     <TextAreaFormGroup label="Description"/>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Category</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                            <option selected>Choose...</option>
-                                            <option value="1">Electronic Accessories</option>
-                                            <option value="2">Health & Beauty</option>
-                                            <option value="3">Home & Lifestyle</option>
-                                        </select>
-                                    </div>
+                                    <SelectFormGroup labelClassName="mb-2" label="Role" selectClassName="custom-select my-1 mr-sm-2" selectData={this.productCategory}/>
                                 </div>
                                 
                                 <div className="col-6">
                                     <InputFormGroup labelClassName="mb-2" label="Product Price"/>
-                                    <div className="form-group">
-                                        <label className="mb-2">Product Price</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Selling Price</label>
-                                        <input type="text" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" label="Selling Price"/>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Stock Amount</label>
-                                        <input type="number" className="form-control"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" label="Stock Amount"/>
                                 </div>
 
                                 <div className="col-12">
