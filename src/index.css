@@ -40,3 +40,7 @@ input[readonly]{
   padding-top: 1.5px;
   padding-bottom: 1px;
 }
+
+.search-tb-font td, .search-tb-font th{
+  font-size: 13px;
+}

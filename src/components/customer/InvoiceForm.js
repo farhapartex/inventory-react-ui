@@ -66,21 +66,21 @@ class InvoiceForm extends Component{
                                             <p><b>Search Box</b></p>
                                         </div>
                                         <div className="col-3">
-                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control" placeholder="Product Name"/>
+                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control form-control-sm" placeholder="Product Name"/>
                                         </div>
                                         <div className="col-3">
-                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control" placeholder="Product Code"/>
+                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control  form-control-sm" placeholder="Product Code"/>
                                         </div>
                                         <div className="col-3">
-                                            <SelectFormGroup labelClassName="sr-only" placeholder="Category" selectClassName="custom-select mr-sm-2" selectData={this.productCategory}/>
+                                            <SelectFormGroup labelClassName="sr-only" placeholder="Category" selectClassName="custom-select custom-select-sm mr-sm-2" selectData={this.productCategory}/>
                                         </div>
                                         <div className="col-3">
-                                            <Button className="btn btn-warning" text="Search"/>
+                                            <Button className="btn btn-sm btn-warning w-75" text="Search"/>
                                         </div>
                                         
                                     </div>
                                     <div className="w-100">
-                                        <SearchDataTable className="table table-striped" columnList={this.columnList} tableData={this.tableData} actionLinkPrefix=""/>
+                                        <SearchDataTable className="table table-sm search-tb-font table-striped" columnList={this.columnList} tableData={this.tableData} actionLinkPrefix=""/>
                                     </div>
                                 </div>
                                 <div className="modal-footer">
