@@ -20,12 +20,6 @@ class SearchDataTable extends Component{
                         this.props.tableData.map((data, index) => {
                             return (
                             <tr key={index}>
-                                <td>
-                                    <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id={index} name="customRadioInline1" className="custom-control-input"/>
-                                        <label className="custom-control-label" htmlFor={index}></label>
-                                    </div>
-                                </td>
                                 {
                                     Object.keys(data).map((key, index) => {
                                         return <TdTag key={index} value={data[key]} isLinked="false"></TdTag>

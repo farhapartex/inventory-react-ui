@@ -9,6 +9,12 @@ class Table extends Component{
         super(props);
     }
 
+    renderAction(data){
+        if(this.props.allowAction){
+            return <TdTag value={data["id"]} isLinked="true" linkPrefix={this.props.actionLinkPrefix}></TdTag>
+        }
+    }
+
 
     render(){
         return (
@@ -24,7 +30,10 @@ class Table extends Component{
                                         return <TdTag key={index} value={data[key]} isLinked="false"></TdTag>
                                     })
                                 }
-                                <TdTag value={data["id"]} isLinked="true" linkPrefix={this.props.actionLinkPrefix}></TdTag>
+
+                                {this.renderAction(data)}
+                                
+                                
                             </tr>
                             )
                         })
@@ -33,6 +42,10 @@ class Table extends Component{
             </table>
         ) 
     }
+}
+
+Table.defaultProps = {
+    allowAction: true
 }
 
 export default Table;

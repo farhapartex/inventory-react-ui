@@ -12,7 +12,6 @@ class SearchTableHead extends Component{
         return (
             <thead>
                 <tr>
-                    <ThTag value=""></ThTag>
                     {
                         this.props.columnList.map((value, index) => {
                             return <ThTag value={value} key={index}></ThTag>

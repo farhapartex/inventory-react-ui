@@ -48,3 +48,7 @@ input[readonly]{
 .s-add-item{
   cursor: pointer;
 }
+
+.sm-tb-font td, .sm-tb-font th{
+  font-size: 14px;
+}

@@ -5,6 +5,7 @@ import Button from "../Button";
 import InputFormGroup from "../input/InputFormGroup";
 import SelectFormGroup from "../input/SelectFormGroup";
 import SearchDataTable from "../table/SearchDataTable";
+import Table from "../table/Table";
 
 
 class InvoiceForm extends Component{
@@ -24,12 +25,20 @@ class InvoiceForm extends Component{
                 "name": "Watch & Sunglasses"
             }
         ]
-        this.columnList = ["ID", "Name", "Category", "Price", "Stock Amount", "Action"];
+        this.columnList = ["ID", "Name", "Stock", "Price", "Action"];
         this.tableData = [
-            {"id": 1, "name": "USB 2.0 to Sata 7+15 Pin 2.5 Converter ..", "category": "Computer Accessories", "price": "238.00", "stock": 20},
-            {"id": 2, "name": "FANTECH VX7 CRYPTO GAMING MOUSE ..", "category": "Computer & Laptop", "price": "980.00", "stock": 34},
-            {"id": 3, "name": "Cake decoration turntable - 28cm and 3 pieces set ..", "category": "Kitchen & Dining", "price": "305.00", "stock": 14},
-            {"id": 4, "name": "Stylish White Sunglasses ..", "category": "Watch & Sunglasses", "price": "139.00", "stock": 40},
+            {"id": 1, "name": "USB 2.0 to Sata 7+15 Pin 2.5 Converter ..", "stock": 20, "price": "238.00"},
+            {"id": 2, "name": "FANTECH VX7 CRYPTO GAMING MOUSE ..", "stock": 20, "price": "980.00"},
+            {"id": 3, "name": "Cake decoration turntable - 28cm and 3 pieces set ..", "stock": 20, "price": "305.00"},
+            {"id": 4, "name": "Stylish White Sunglasses ..", "stock": 20, "price": "139.00"},
+        ]
+
+        this.invoiceColumnList = ["ID", "Name", "Quantity", "Price", "Sub total"];
+        this.invoiceTableData = [
+            {"id": 1, "name": "USB 2.0 to Sata 7+15 Pin 2.5 Converter ..", "quantity": 1, "price": "238.00", "subtotal": 2000},
+            {"id": 2, "name": "FANTECH VX7 CRYPTO GAMING MOUSE ..", "quantity": 2, "price": "980.00", "subtotal": 2000},
+            {"id": 3, "name": "Cake decoration turntable - 28cm and 3 pieces set ..", "quantity": 1, "price": "305.00", "subtotal": 2000},
+            {"id": 4, "name": "Stylish White Sunglasses ..", "quantity": 4, "price": "139.00", "subtotal": 2000},
         ]
     }
 
@@ -38,7 +47,7 @@ class InvoiceForm extends Component{
         return (
             <div className="admin-content mx-auto">
                <div className="w-100 mb-5">
-                    <AnchorTag link="/app/shop/invoice/list" className="btn btn-primary float-right" itemValue="Back to Invoice List"></AnchorTag>
+                    <AnchorTag link="/app/shop/invoice/list" className="btn btn-sm btn-primary float-right" itemValue="Back to Invoice List"></AnchorTag>
                     <h4>Create Invoice</h4>
                 </div>
                 <div className="w-75">
@@ -46,8 +55,25 @@ class InvoiceForm extends Component{
                         <div className="row mb-5">
                             <div className="col-3">
                                 <div className="form-group">
-                                    <Button className="btn btn-success w-100" text="Add Item" dataToggle="modal" dataTarget="#exampleModalCenter"/>
+                                    <Button className="btn btn-sm btn-success w-100" text="Add Item" dataToggle="modal" dataTarget="#exampleModalCenter"/>
                                 </div>
+                            </div>
+                            <div className="col-3">
+                                <div className="form-group">
+                                    <Button className="btn btn-sm btn-warning w-100" text="Save Invoice"/>
+                                </div>
+                            </div>
+
+                            <div className="col-12 mt-4">
+                                <Table className="table table-striped" allowAction={false} columnList={this.invoiceColumnList} tableData={this.invoiceTableData} actionLinkPrefix=""></Table>
+                                <table className="table table-striped w-25 float-right mt-4">
+                                    <tbody>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>25785.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         {/* Modal */}
