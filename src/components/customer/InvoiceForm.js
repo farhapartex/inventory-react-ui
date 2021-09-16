@@ -54,39 +54,35 @@ class InvoiceForm extends Component{
                         <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div className="modal-dialog modal-xl " role="document">
                                 <div className="modal-content">
-                                <div className="modal-header">
-                                    <h5 className="modal-title" id="exampleModalCenterTitle">Search & Add Product</h5>
-                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body">
-                                    <div className="form-row mb-5 modal-search-box">
-                                        <div className="col-12">
-                                            <p><b>Search Box</b></p>
-                                        </div>
-                                        <div className="col-3">
-                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control form-control-sm" placeholder="Product Name"/>
-                                        </div>
-                                        <div className="col-3">
-                                            <InputFormGroup labelClassName="sr-only" inputClassName="form-control  form-control-sm" placeholder="Product Code"/>
-                                        </div>
-                                        <div className="col-3">
-                                            <SelectFormGroup labelClassName="sr-only" placeholder="Category" selectClassName="custom-select custom-select-sm mr-sm-2" selectData={this.productCategory}/>
-                                        </div>
-                                        <div className="col-3">
-                                            <Button className="btn btn-sm btn-warning w-75" text="Search"/>
-                                        </div>
-                                        
+                                    <div className="modal-header">
+                                        <h5 className="modal-title" id="exampleModalCenterTitle">Search & Add Product</h5>
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                    <div className="w-100">
-                                        <SearchDataTable className="table table-sm search-tb-font table-striped" columnList={this.columnList} tableData={this.tableData} actionLinkPrefix=""/>
+                                    <div className="modal-body">
+                                        <div className="form-row mb-5 modal-search-box">
+                                            <div className="col-12">
+                                                <p><b>Search Box</b></p>
+                                            </div>
+                                            <div className="col-3">
+                                                <InputFormGroup labelClassName="sr-only" inputClassName="form-control form-control-sm" placeholder="Product Name"/>
+                                            </div>
+                                            <div className="col-3">
+                                                <InputFormGroup labelClassName="sr-only" inputClassName="form-control  form-control-sm" placeholder="Product Code"/>
+                                            </div>
+                                            <div className="col-3">
+                                                <SelectFormGroup labelClassName="sr-only" placeholder="Category" selectClassName="custom-select custom-select-sm mr-sm-2" selectData={this.productCategory}/>
+                                            </div>
+                                            <div className="col-3">
+                                                <Button className="btn btn-sm btn-warning w-75" text="Search"/>
+                                            </div>
+                                            
+                                        </div>
+                                        <div className="w-100">
+                                            <SearchDataTable className="table table-sm search-tb-font table-striped" columnList={this.columnList} tableData={this.tableData} actionLinkPrefix=""/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" className="btn btn-primary">Save changes</button>
-                                </div>
                                 </div>
                             </div>
                         </div>

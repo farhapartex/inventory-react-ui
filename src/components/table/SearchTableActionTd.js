@@ -9,7 +9,9 @@ class SearchActionTd extends Component{
 
     render(){
         return (
-            <div>Add</div>
+            <td>
+                <div className="s-add-item">Add</div>
+            </td>
         )
     }
 }

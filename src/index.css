@@ -44,3 +44,7 @@ input[readonly]{
 .search-tb-font td, .search-tb-font th{
   font-size: 13px;
 }
+
+.s-add-item{
+  cursor: pointer;
+}
