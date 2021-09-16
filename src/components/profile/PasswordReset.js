@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import InputPasswordGroup from "../../components/input/InputPasswordGroup";
 
 class PasswordResetForm extends Component{
     constructor(props){
@@ -18,28 +18,23 @@ class PasswordResetForm extends Component{
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-4">
-                                    <div className="form-group">
-                                        <label className="mb-2">Old Password</label>
-                                        <input type="password" className="form-control form-control-sm"/>
-                                    </div>
+                                    <InputPasswordGroup inputClassName="form-control form-control-sm" labelClassName="mb-2" label="Old Password"/>
                                 </div>
                                 <div className="col-4">
-                                    <div className="form-group">
-                                        <label className="mb-2">New Password</label>
-                                        <input type="password" className="form-control form-control-sm"/>
-                                    </div>
+                                    <InputPasswordGroup inputClassName="form-control form-control-sm" labelClassName="mb-2" label="New Password"/>
                                 </div>
+                            </div>
+                            <div className="row">
                                 <div className="col-4">
-                                    <div className="form-group">
-                                        <label className="mb-2">Confirm Password</label>
-                                        <input type="password" className="form-control form-control-sm"/>
-                                    </div>
+                                    <InputPasswordGroup inputClassName="form-control form-control-sm" labelClassName="mb-2" label="Confirm Password"/>
                                 </div>
+                            </div>
+                            <div className="row">
 
                                 <div className="col-12 mt-3">
                                     <div className="form-group">
-                                        <input type="reset" className="btn btn-warning" value="Reset"/>
-                                        <input type="submit" className="btn btn-success ml-3" value="Submit"/>
+                                        <input type="reset" className="btn btn-sm btn-warning" value="Reset"/>
+                                        <input type="submit" className="btn btn-sm btn-success ml-3" value="Submit"/>
                                     </div>
                                 </div>
                             </div>
