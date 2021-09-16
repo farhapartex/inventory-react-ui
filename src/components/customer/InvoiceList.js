@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import AnchorTag from "../../components/Anchortag";
 import Table from "../../components/table/Table";
+import InputFormGroup from "../input/InputFormGroup";
 
 
 class InvoiceList extends Component{
@@ -25,21 +26,17 @@ class InvoiceList extends Component{
                 </div>
                 <div className="row mb-5">
                     <div className="col-12">
-                        <p><b>Search Box</b></p>
+                        <p><b>Search Invoice</b></p>
                     </div>
-                    <div className="col-3">
-                        <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Customer name"/>
-                        </div>
+                    <div className="col-2">
+                        <InputFormGroup labelClassName="sr-only" inputClassName="form-control form-control-sm" placeholder="Customer Name"/>
                     </div>
-                    <div className="col-3">
-                        <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Invoice ID"/>
-                        </div>
+                    <div className="col-2">
+                        <InputFormGroup labelClassName="sr-only" inputClassName="form-control form-control-sm" placeholder="Invoice ID"/>
                     </div>
-                    <div className="col">
+                    <div className="col-2">
                         <div className="form-group">
-                            <input type="submit" className="btn btn-success" value="Search"/>
+                            <input type="submit" className="btn btn-sm btn-success" value="Search"/>
                         </div>
                     </div>
                 </div>
