@@ -52,3 +52,8 @@ input[readonly]{
 .sm-tb-font td, .sm-tb-font th{
   font-size: 14px;
 }
+
+.dash-summary-cell{
+  border: 1px solid #e6e6e6;
+  padding: 8px 10px;
+}
