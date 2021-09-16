@@ -5,6 +5,7 @@ import HeaderNavBar from "../../components/navigation/HeaderNavbar";
 import AnchorTag from "../../components/Anchortag";
 import DashboardPage from "../../pages/customer/Dashboard";
 import CustomerShopPage from "../customer/shop/CustomerShopePage";
+import ProfileBasePage from "../customer/profile/ProfileBasePage";
 
 
 class CustomerRootPage extends Component{
@@ -29,14 +30,15 @@ class CustomerRootPage extends Component{
                                         <AnchorTag link={`${this.props.match.path}/shop/product-category/list`} liClassName="" className="list-group-item list-group-item-action" itemValue="Product Category"></AnchorTag>
                                         <AnchorTag link={`${this.props.match.path}/shop/product/list`} className="list-group-item list-group-item-action" itemValue="Product"></AnchorTag>
                                         <AnchorTag link={`${this.props.match.path}/shop/invoice/list`} className="list-group-item list-group-item-action" itemValue="Invoice"></AnchorTag>
-                                        <AnchorTag link={`${this.props.match.path}/profile`} className="list-group-item list-group-item-action" itemValue="Profile"></AnchorTag>
-                                        <AnchorTag link={`${this.props.match.path}/settings/password-reset`} className="list-group-item list-group-item-action" itemValue="Password Reset"></AnchorTag>
+                                        <AnchorTag link={`${this.props.match.path}/profile/me`} className="list-group-item list-group-item-action" itemValue="Profile"></AnchorTag>
+                                        <AnchorTag link={`${this.props.match.path}/profile/password-reset`} className="list-group-item list-group-item-action" itemValue="Password Reset"></AnchorTag>
                                     </div>
                                 </div>
                                 <div className="col-10">
                                     <Switch>
                                         <Route path={`${this.props.match.path}/dashboard`} component={DashboardPage}/>
                                         <Route path={`${this.props.match.path}/shop`} component={CustomerShopPage}/>
+                                        <Route path={`${this.props.match.path}/profile`} component={ProfileBasePage}/>
                                     </Switch>
                                     
                                 </div>
