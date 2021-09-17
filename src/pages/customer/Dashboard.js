@@ -11,26 +11,26 @@ class DashboardPage extends Component{
     render(){
         return (
             <div className="admin-content mx-auto">
-                <PageHeader headerText="Dashboard"/>
+                <PageHeader headerText="Welcome to Dashboard"/>
                 <div className="w-75">
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-4">
                                 <div className="dash-summary-cell">
-                                    <p><b>Products</b></p>
+                                    <p><b>Total Products</b></p>
                                     <p>1200</p>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="dash-summary-cell">
-                                    <p><b>Invoices</b></p>
+                                    <p><b>Total Invoices</b></p>
                                     <p>3400</p>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="dash-summary-cell">
-                                    <p><b>Total sell</b></p>
-                                    <p>1234500</p>
+                                    <p><b>Total Sell Today</b></p>
+                                    <p>123500</p>
                                 </div>
                             </div>
                         </div>

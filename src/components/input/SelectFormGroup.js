@@ -7,11 +7,21 @@ class SelectFormGroup extends Component{
         super(props);
     }
 
+    renderLabel(){
+        if(this.props.label == "" || this.props.label == null){
+            return ""
+        }
+        else{
+            return <label className={this.props.labelClassName}>{this.props.label}</label>
+        }
+        
+    }
+
 
     render(){
         return (
             <div className="form-group">
-                <label className={this.props.labelClassName}>{this.props.label}</label>
+                {this.renderLabel()}
                 <SelectInput className={this.props.selectClassName} id="" selectData={this.props.selectData}/>
             </div>
         )

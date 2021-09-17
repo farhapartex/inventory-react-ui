@@ -56,4 +56,5 @@ input[readonly]{
 .dash-summary-cell{
   border: 1px solid #e6e6e6;
   padding: 8px 10px;
+  background: #e6e6e6;
 }
