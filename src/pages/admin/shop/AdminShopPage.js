@@ -1,8 +1,6 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "../../../style/admin.css";
-import HeaderNavBar from "../../../components/navigation/HeaderNavbar";
-import AnchorTag from "../../../components/Anchortag";
 import ShopList from "../../../components/admin/shop/ShopList";
 import ShopForm from "../../../components/admin/shop/ShopForm";
 import ShopView from "../../../components/admin/shop/ShopView";

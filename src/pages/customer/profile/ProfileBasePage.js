@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Profile from "../../../components/profile/Profile";
 import PasswordResetForm from "../../../components/profile/PasswordReset";
 

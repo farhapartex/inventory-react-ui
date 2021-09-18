@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 import "../../../style/admin.css";
 import AnchorTag from "../../../components/Anchortag";
 import Table from "../../../components/table/Table";

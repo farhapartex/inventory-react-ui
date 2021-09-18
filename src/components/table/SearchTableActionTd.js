@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import AnchorTag from "../Anchortag";
 
 class SearchActionTd extends Component{
     constructor(props){

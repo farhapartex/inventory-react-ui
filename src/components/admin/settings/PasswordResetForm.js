@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 import "../../../style/admin.css";
-import AnchorTag from "../../../components/Anchortag";
 
 
 class PasswordResetForm extends Component{

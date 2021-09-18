@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 import SearchTableHead from "./SearchTableHead";
 import TdTag from "./TdTag";
 import SearchActionTd from "../table/SearchTableActionTd";

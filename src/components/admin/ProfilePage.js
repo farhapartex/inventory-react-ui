@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 import "../../style/admin.css";
-import AnchorTag from "../../components/Anchortag";
 
 
 class ProfilePage extends Component{
@@ -41,8 +39,8 @@ class ProfilePage extends Component{
                                 <div className="col-6">
                                     <div className="form-group">
                                         <label className="mb-2">Role</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                            <option selected>Choose...</option>
+                                        <select className="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <option >Choose...</option>
                                             <option value="1">Super Admin</option>
                                             <option value="2">Admin</option>
                                             <option value="3">Editor</option>
