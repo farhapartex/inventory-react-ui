@@ -6,6 +6,15 @@ import InputFormGroup from "../input/InputFormGroup";
 class ShopEdit extends Component{
     constructor(props){
         super(props);
+        this.state = {
+            showSuccessMsg: false
+        }
+        
+    }
+
+    handleShopUpdate(){
+        console.log("working update function");
+        this.setState({showSuccessMsg: true})
     }
 
 
@@ -16,27 +25,29 @@ class ShopEdit extends Component{
                     <h4>Shop Details</h4>
                 </div>
                 <div className="w-75">
-                    <form>
-                        <div className="container-fluid">
-                            <div className="row">
-
-                                <div className="col-12 mt-3">
-                                    <p><b>Shop Information</b></p>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className={"col-12 " + (this.state.showSuccessMsg ? "": "d-none")}>
+                                <div className="alert alert-primary" role="alert">
+                                    Shop name update
                                 </div>
-                                <div className="col-6">
-                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
-                                </div>
+                            </div>
 
-                                <div className="col-12 mt-4">
-                                    <div className="form-group">
-                                        <AnchorTag className="btn btn-sm btn-warning mr-3" itemValue="View Shop" link="/app/shop/view"/>
-                                        <input type="submit" className="btn btn-sm btn-primary" value="Update"/>
-                                    </div>
+                            <div className="col-12 mt-3">
+                                <p><b>Shop Information</b></p>
+                            </div>
+                            <div className="col-6">
+                                <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
+                            </div>
+
+                            <div className="col-12 mt-4">
+                                <div className="form-group">
+                                    <AnchorTag className="btn btn-sm btn-warning mr-3" itemValue="View Shop" link="/app/shop/view"/>
+                                    <input type="submit" className="btn btn-sm btn-primary" value="Update" onClick={() => this.handleShopUpdate()}/>
                                 </div>
                             </div>
                         </div>
-                        
-                    </form>
+                    </div>
                 </div>
                 
             </div>
