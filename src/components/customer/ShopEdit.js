@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import AnchorTag from "../../components/Anchortag";
 import InputFormGroup from "../input/InputFormGroup";
+import PrimaryAlert from "../alerts/Primary";
 
 
 class ShopEdit extends Component{
@@ -13,7 +14,6 @@ class ShopEdit extends Component{
     }
 
     handleShopUpdate(){
-        console.log("working update function");
         this.setState({showSuccessMsg: true})
     }
 
@@ -28,9 +28,7 @@ class ShopEdit extends Component{
                     <div className="container-fluid">
                         <div className="row">
                             <div className={"col-12 " + (this.state.showSuccessMsg ? "": "d-none")}>
-                                <div className="alert alert-primary" role="alert">
-                                    Shop name update
-                                </div>
+                                <PrimaryAlert className="alert alert-primary" alertMessage="Shop name updated"/>
                             </div>
 
                             <div className="col-12 mt-3">
