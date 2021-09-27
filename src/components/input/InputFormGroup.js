@@ -22,7 +22,7 @@ class InputFormGroup extends Component{
         return (
             <div className="form-group">
                 {this.renderLabel()}
-                <InputText className={this.props.inputClassName} placeholder={this.props.placeholder}/>
+                <InputText className={this.props.inputClassName} placeholder={this.props.placeholder} value={this.props.value}/>
             </div>
         )
     }
@@ -31,7 +31,8 @@ class InputFormGroup extends Component{
 InputFormGroup.defaultProps = {
     inputClassName: "form-control",
     placeholder: "",
-    label: ""
+    label: "",
+    value: ""
 }
 
 console.log(InputFormGroup.defaultProps);

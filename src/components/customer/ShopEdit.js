@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import AnchorTag from "../../components/Anchortag";
+import InputFormGroup from "../input/InputFormGroup";
 
 
 class ShopEdit extends Component{
@@ -23,16 +24,13 @@ class ShopEdit extends Component{
                                     <p><b>Shop Information</b></p>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Shop Name</label>
-                                        <input type="text" className="form-control" value="Digital Camera Shop"/>
-                                    </div>
+                                    <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
                                 </div>
 
                                 <div className="col-12 mt-4">
                                     <div className="form-group">
-                                        <AnchorTag className="btn btn-warning mr-3" itemValue="View Shop" link="/app/shop/view"/>
-                                        <input type="submit" className="btn btn-primary" value="Update"/>
+                                        <AnchorTag className="btn btn-sm btn-warning mr-3" itemValue="View Shop" link="/app/shop/view"/>
+                                        <input type="submit" className="btn btn-sm btn-primary" value="Update"/>
                                     </div>
                                 </div>
                             </div>
