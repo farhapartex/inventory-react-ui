@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import AnchorTag from "../../components/Anchortag";
+import InputFormGroup from "../input/InputFormGroup";
 
 
 class ShopView extends Component{
@@ -22,28 +23,16 @@ class ShopView extends Component{
                                     <p><b>Shop Owner Information</b></p>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">First Name</label>
-                                        <input type="text" className="form-control" value="Md Nazmul" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="Md Nazmul Hasan" label="First Name" />
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Last Name</label>
-                                        <input type="text" className="form-control" value="Hasan" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="Hasan" label="Last Name" />
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Email</label>
-                                        <input type="text" className="form-control" value="hasan08sust@gmail.com" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="hasan08sust@gmail.com" label="Email" />
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Status</label>
-                                        <input type="text" className="form-control" value="Active" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="Active" label="Status" />
                                 </div>
 
 
@@ -51,33 +40,22 @@ class ShopView extends Component{
                                     <p><b>Shop Information</b></p>
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Shop Name</label>
-                                        <input type="text" className="form-control" value="Digital Camera Shop" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="Digital Camera Shop" label="Shop Name" />
+                                    
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Total Employee</label>
-                                        <input type="text" className="form-control" value="25" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="25" label="Total Employeeatus" />
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Total Products</label>
-                                        <input type="text" className="form-control" value="245" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="245" label="Total Products" />
                                 </div>
                                 <div className="col-6">
-                                    <div className="form-group">
-                                        <label className="mb-2">Status</label>
-                                        <input type="text" className="form-control" value="Active" readOnly/>
-                                    </div>
+                                    <InputFormGroup inputClassName="form-control" labelClassName="mb-2" isReadOnly={true} value="Active" label="Status" />
                                 </div>
 
                                 <div className="col-12 mt-4">
                                     <div className="form-group">
-                                        <AnchorTag className="btn btn-warning" itemValue="Edit Shop" link="/app/shop/edit"/>
+                                        <AnchorTag className="btn btn-sm btn-warning" itemValue="Edit Shop" link="/app/shop/edit"/>
                                     </div>
                                 </div>
                             </div>

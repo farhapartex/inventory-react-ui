@@ -17,12 +17,22 @@ class InputFormGroup extends Component{
         
     }
 
+    renderInputText(){
+        if(this.props.isReadOnly == true){
+            return <input type="text" className={this.props.inputClassName} placeholder={this.props.placeholder} defaultValue={this.props.value} readOnly/>
+        }
+        else{
+            return <InputText className={this.props.inputClassName} placeholder={this.props.placeholder} value={this.props.value}/>
+        }
+    }
+
 
     render(){
         return (
             <div className="form-group">
                 {this.renderLabel()}
-                <InputText className={this.props.inputClassName} placeholder={this.props.placeholder} value={this.props.value}/>
+                {this.renderInputText()}
+                
             </div>
         )
     }
@@ -32,9 +42,8 @@ InputFormGroup.defaultProps = {
     inputClassName: "form-control",
     placeholder: "",
     label: "",
-    value: ""
+    value: "",
+    isReadOnly: false
 }
-
-console.log(InputFormGroup.defaultProps);
 
 export default InputFormGroup;
