@@ -35,7 +35,7 @@ class ShopEdit extends Component{
                                 <p><b>Shop Information</b></p>
                             </div>
                             <div className="col-6">
-                                <InputFormGroup labelClassName="mb-2" inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
+                                <InputFormGroup labelClassName="mb-2" ref="shopName" inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
                             </div>
 
                             <div className="col-12 mt-4">

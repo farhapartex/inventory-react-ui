@@ -22,7 +22,7 @@ class InputFormGroup extends Component{
             return <input type="text" className={this.props.inputClassName} placeholder={this.props.placeholder} defaultValue={this.props.value} readOnly/>
         }
         else{
-            return <InputText className={this.props.inputClassName} placeholder={this.props.placeholder} value={this.props.value}/>
+            return <InputText className={this.props.inputClassName} placeholder={this.props.placeholder} value={this.props.value} ref={this.props.ref}/>
         }
     }
 
