@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import AnchorTag from "../../components/Anchortag";
 import InputFormGroup from "../input/InputFormGroup";
 import PrimaryAlert from "../alerts/Primary";
+import TextFormGroup from "../../common/components/textFormGroup";
 
 
 class ShopEdit extends Component{

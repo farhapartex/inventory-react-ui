@@ -1,49 +1,41 @@
 import React, {Component} from "react";
-import InputText from "./InputText";
+import PropTypes from "prop-types";
+import TextField from "../textField";
 
 
 class TextFormGroup extends Component{
-    constructor(props){
-        super(props);
+    static propType = {
+        inputType: PropTypes.string,
+        id: PropTypes.string,
+        inputClassName : PropTypes.string,
+        placeholder: PropTypes.string,
+        value: PropTypes.string,
+        onChange: PropTypes.func,
+        label: PropTypes.string,
+        labelClassName: PropTypes.string
     }
 
-    renderLabel(){
-        if(this.props.label == "" || this.props.label == null){
-            return ""
-        }
-        else{
-            return <label className={this.props.labelClassName}>{this.props.label}</label>
-        }
-        
+    static defaultProps = {
+        inputType: "text",
+        id: "",
+        inputClassName: "form-control",
+        placeholder: "",
+        value: "",
+        onChange: () => {},
+        label: "",
+        labelClassName: ""
     }
-
-    renderInputText(){
-        if(this.props.isReadOnly == true){
-            return <input type="text" className={this.props.inputClassName} placeholder={this.props.placeholder} defaultValue={this.props.value} readOnly/>
-        }
-        else{
-            return <InputText className={this.props.inputClassName} onChange={this.props.onChange} placeholder={this.props.placeholder} value={this.props.value} ref={this.props.ref}/>
-        }
-    }
-
 
     render(){
+        const {inputType, id, inputClassName, placeholder, value, onChange, label, labelClassName}  = this.props;
+
         return (
             <div className="form-group">
-                {this.renderLabel()}
-                {this.renderInputText()}
-                
+                {label && <label className={labelClassName}>{label}</label>}
+                <TextField inputType={inputType} id={id} className={inputClassName} onChange={onChange} placeholder={placeholder} value={value}/>
             </div>
         )
     }
-}
-
-TextFormGroup.defaultProps = {
-    inputClassName: "form-control",
-    placeholder: "",
-    label: null,
-    value: "",
-    isReadOnly: false
 }
 
 export default TextFormGroup;
