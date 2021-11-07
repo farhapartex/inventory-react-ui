@@ -3,6 +3,7 @@ import AnchorTag from "../../components/Anchortag";
 import InputFormGroup from "../input/InputFormGroup";
 import PrimaryAlert from "../alerts/Primary";
 import TextFormGroup from "../../common/components/textFormGroup";
+import Banner from "../../common/banner/banner";
 
 
 class ShopEdit extends Component{
@@ -18,12 +19,18 @@ class ShopEdit extends Component{
 
 
 
-    handleShopUpdate(){
+    handleShopUpdate = () => {
         this.setState({showSuccessMsg: true})
     }
 
-    handleOnChange(e){
+    handleOnChange = (e) => {
         this.setState({shopName: e.target.value});
+    }
+
+    SuccessBanner = () => {
+        return (<div className="col-12">
+                    <PrimaryAlert className="alert alert-primary" alertMessage="Shop name updated"/>
+                </div>)
     }
 
 
@@ -35,16 +42,15 @@ class ShopEdit extends Component{
                 </div>
                 <div className="w-75">
                     <div className="container-fluid">
+                        <Banner type="error" message="Hello all"/>
                         <div className="row">
-                            <div className={"col-12 " + (this.state.showSuccessMsg ? "": "d-none")}>
-                                <PrimaryAlert className="alert alert-primary" alertMessage="Shop name updated"/>
-                            </div>
+                            { this.state.showSuccessMsg && <this.SuccessBanner /> }
 
                             <div className="col-12 mt-3">
                                 <p><b>Shop Information</b></p>
                             </div>
                             <div className="col-6">
-                                <InputFormGroup labelClassName="mb-2" onChange={this.handleOnChange} inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
+                                <TextFormGroup labelClassName="mb-2" onChange={this.handleOnChange} inputClassName="form-control" label="Shop Name" value="Digital Camera Shop"/>
                             </div>
 
                             <div className="col-12 mt-4">
