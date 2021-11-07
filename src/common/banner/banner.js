@@ -30,7 +30,12 @@ class Banner extends Component{
         const banner = this.types[type];
 
         return (
-            <div className={banner.className} role="alert">{message}</div>
+            <div className={banner.className} role="alert">
+                <span>{message}</span>
+                <button type="button" class="close" onClick={onClose}>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         ) 
     }
 }

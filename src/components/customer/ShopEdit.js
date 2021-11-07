@@ -11,8 +11,10 @@ class ShopEdit extends Component{
         super(props);
         this.state = {
             showSuccessMsg: false,
-            showErrorMsg: false,
-            shopName: ""
+            showErrorMsg: true,
+            shopName: "",
+            errorMessage: "",
+            successMessage: ""
         }
         
     }
@@ -20,6 +22,7 @@ class ShopEdit extends Component{
 
 
     handleShopUpdate = () => {
+        this.setState({successMessage: "Shop info updated!"})
         this.setState({showSuccessMsg: true})
     }
 
@@ -29,8 +32,14 @@ class ShopEdit extends Component{
 
     SuccessBanner = () => {
         return (<div className="col-12">
-                    <PrimaryAlert className="alert alert-primary" alertMessage="Shop name updated"/>
+                    <Banner type="info" message={this.state.successMessage} onClose={()=> this.setState({showSuccessMsg: false})}/>
                 </div>)
+    }
+    ErrorBanner = () => {
+        return ( 
+            <Banner type="error" message={this.state.errorMessage} onClose={()=> this.setState({showErrorMsg: false})}/>
+        );
+        
     }
 
 
@@ -42,7 +51,6 @@ class ShopEdit extends Component{
                 </div>
                 <div className="w-75">
                     <div className="container-fluid">
-                        <Banner type="error" message="Hello all"/>
                         <div className="row">
                             { this.state.showSuccessMsg && <this.SuccessBanner /> }
 
