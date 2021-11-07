@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { ErrorSvg, WarringSvg, InfoSvg, SuccessSvg, ExitSvg } from "./icons";
 
 class Banner extends Component{
-    propTypes = {
+    static propTypes = {
         type: PropTypes.oneOf(["error", "warning", "info", "success"]).isRequired,
         onClose: PropTypes.func,
         icon: PropTypes.node,
         message: PropTypes.string
     };
 
-    defaultProps = {
+    static defaultProps = {
         onClose: () => {},
         icon: null,
         message: ""
