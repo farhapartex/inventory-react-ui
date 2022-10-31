@@ -38,6 +38,7 @@ class DashboardPage extends Component{
                 </div>
             
             </div>
+            
         ) 
     }
 }
