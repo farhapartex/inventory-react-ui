@@ -58,3 +58,13 @@ input[readonly]{
   padding: 8px 10px;
   background: #e6e6e6;
 }
+
+/*Logo*/
+
+.loginpage-logo-img{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 25%;
+}
