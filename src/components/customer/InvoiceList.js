@@ -25,7 +25,7 @@ class InvoiceList extends Component{
     render(){
         return (
            
-                <SpreadsheetComponent/>
+                <SpreadsheetComponent height="100vh" className="my-5"/>
                 
         ) 
     }
